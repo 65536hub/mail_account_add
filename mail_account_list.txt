@@ -1,0 +1,4 @@
+test01@abc.jp,password1
+test02@abc.jp,password2
+test03@xyz.com.password3
+test04@xyz.com.password4
