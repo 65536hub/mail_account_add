@@ -62,7 +62,7 @@ fi
 echo "###---------- Dovecot User List ----------"
 cat $POSTFIX_LIST | while IFS=, read ADDRESS PW
 do
-                echo -n $ADDRESS; doveadm pw -s cram-md5 -u $ADDRESS -p $PW
+        echo -n $ADDRESS; doveadm pw -s cram-md5 -u $ADDRESS -p $PW
 done | tee $SCRIPT_DIR/$DOVECOT_LIST
 echo -e
 
@@ -76,7 +76,7 @@ done
 echo "###---------- Postfix Virtual Mailbox List ----------"
 awk '{print $1}' $POSTFIX_LIST | while IFS=@ read USER DOMAIN
 do
-               echo "$USER@$DOMAIN             $DOMAIN/$USER/Maildir/"
-
+        echo "$USER@$DOMAIN             $DOMAIN/$USER/Maildir/"
 done
+
 
