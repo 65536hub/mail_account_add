@@ -8,7 +8,6 @@
 本スクリプトは以下の運用自動化を目的として作成。
 
  - Postfix の virtual_mailbox（仮想ユーザ）と Dovecot のメールアカウントを大量に自動生成
- - 作成した多数のユーザの SMTP 認証可否を一括検証
 ---
 
 
@@ -32,7 +31,6 @@
 ```
 mail_account_tool/
 ├─ mail_account_add.sh       # メールアカウント生成スクリプト
-├─ smtp_user_check.sh        # SMTP認証チェックスクリプト
 ├─ mail_account_list.txt     # アカウント追加用サンプルリスト
 └─ README.md                 # このファイル
 ```
@@ -78,19 +76,6 @@ test02@abc.jp,password2
 test03@xyz.com,password3
 test04@xyz.com,password4
 ```
-
-※カンマ区切りで <メールアドレス>,<パスワード> の形式
-
-2. SMTP 認証チェック
-```
-./smtp_user_check.sh mail_account_list.txt
-```
-
-■処理内容(smtp_user_check.sh)
-
-- 指定したユーザーリストに対して doveadm auth login を実行
-- ログイン成功/失敗を表示
-
 
 ## 6. 注意事項
 
