@@ -63,6 +63,7 @@ cd ~/bin/mail_account_tool
 
 ```
 mail_account_list.txt の形式（サンプル）
+※必ず「メールアカウント,パスワード」の書式で記載
 
 test01@abc.jp,password1
 test02@abc.jp,password2
