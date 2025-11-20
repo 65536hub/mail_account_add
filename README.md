@@ -1,8 +1,19 @@
-■概要
-
 このリポジトリには、Linux サーバ上で Dovecot/Postfix を利用している環境向けのメールアカウント管理スクリプトが含まれています。
 
-主な機能は以下の通りです。
+
+---
+
+## 1. 目的
+
+本スクリプトは以下の運用自動化を目的として作成。
+
+ - Postfix の virtual_mailbox（仮想ユーザ）と Dovecot のメールアカウントを大量に自動生成
+ - 作成した多数のユーザの SMTP 認証可否を一括検証
+---
+
+
+## 2. スクリプトの概要
+
 
 1.メールアカウント追加・更新 (mail_account_add.sh)
 
@@ -16,9 +27,9 @@
 - 指定ユーザーリストに対してログイン可否を検証
 
 
-```
-スクリプト構成（匿名化済み）
+## 3. スクリプトの構成
 
+```
 mail_account_tool/
 ├─ mail_account_add.sh       # メールアカウント生成スクリプト
 ├─ smtp_user_check.sh        # SMTP認証チェックスクリプト
@@ -26,7 +37,7 @@ mail_account_tool/
 └─ README.md                 # このファイル
 ```
 
-■事前準備
+## 4. 事前準備
 
 - RHEL系のLinux環境上にDovecot および Postfix がインストール済みであること  
 - 以下のディレクトリ構成が存在すること（ポートフォリオ用に匿名化しています）
@@ -48,6 +59,8 @@ Postfix 仮想メールボックスファイル（例: virtual_mailboxes_org）
 cd ~/bin/mail_account_tool
 ./mail_account_add.sh
 ```
+
+## 5. 実行方法
 
 ■処理内容(mail_account_add.sh)
 
@@ -79,7 +92,7 @@ test04@xyz.com,password4
 - ログイン成功/失敗を表示
 
 
-■注意事項
+## 6. 注意事項
 
 - 実運用環境で使用する場合は、必ず既存データのバックアップを作成してください
 - mail_account_list.txt に平文パスワードが含まれるため、アクセス制限を行ってください
