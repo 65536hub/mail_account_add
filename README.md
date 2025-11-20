@@ -5,9 +5,9 @@
 
 ## 1. 目的
 
- 本スクリプトは以下の運用自動化を目的として作成。
+ 本スクリプトは以下の自動化を目的として作成。
 
- - Postfix の virtual_mailbox（仮想ユーザ）と Dovecot のメールアカウントを大量に自動生成
+ - Postfix の virtual_mailbox と Dovecot の virtual_users のメールアカウント情報を一括で一覧リストに出して自動生成
 ---
 
 
