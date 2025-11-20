@@ -1,7 +1,6 @@
 #!/bin/bash
 
 ###-------------------------------------------------------------------
-
 ディレクトリ構成（匿名化済み）
 DOVECOT_DIR=/etc/dovecot
 POSTFIX_DIR=/etc/postfix
@@ -78,4 +77,5 @@ echo "###---------- Postfix Virtual Mailbox List ----------"
 awk '{print $1}' $POSTFIX_LIST | while IFS=@ read USER DOMAIN
 do
                echo "$USER@$DOMAIN             $DOMAIN/$USER/Maildir/"
+
 done
