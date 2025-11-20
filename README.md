@@ -22,10 +22,13 @@
 ## 3. スクリプトの構成
 
 ```
-mail_account_tool/
-├─ mail_account_add.sh       # メールアカウント生成スクリプト
-├─ mail_account_list.txt     # アカウント追加用サンプルリスト
-└─ README.md                 # このファイル
+以下の情報を一括で一覧リストに出して自動生成
+
+・Postfix 
+  └ virtual_mailbox   # 仮想メールBOXアカウント
+
+・Dovecot
+  └ virtual_users     # 仮想メール受信アカウント
 ```
 
 ## 4. 事前準備
