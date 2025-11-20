@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ###-------------------------------------------------------------------
-ディレクトリ構成（匿名化済み）
+#ディレクトリ構成（匿名化済み）
 DOVECOT_DIR=/etc/dovecot
 POSTFIX_DIR=/etc/postfix
 SCRIPT_DIR="$HOME/bin/mail_account_tool"
@@ -79,3 +79,4 @@ do
                echo "$USER@$DOMAIN             $DOMAIN/$USER/Maildir/"
 
 done
+
